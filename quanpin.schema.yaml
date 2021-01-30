@@ -1,0 +1,22 @@
+# Rime schema
+# encoding: utf-8
+
+__include: pinyin.schema:/
+
+schema:
+  schema_id: luna_quanpin
+  name: 全拼
+  version: '0.2'
+  author:
+    - Oxygen IME
+  description: |
+    去除声调的汉语拼音。
+    可供形码用作拼音反查。
+
+speller:
+  algebra:
+    __patch:
+      - pinyin:/spelling_correction
+
+translator:
+  prism: quanpin
