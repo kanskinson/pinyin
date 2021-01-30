@@ -4,7 +4,7 @@
 __include: pinyin.schema:/
 
 schema:
-  schema_id: luna_quanpin
+  schema_id: quanpin
   name: 全拼
   version: '0.2'
   author:
