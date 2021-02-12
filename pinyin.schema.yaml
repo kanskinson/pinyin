@@ -18,8 +18,9 @@ switches:
     states: [ 中, Eng ]
   - name: full_shape
     states: [ 半, 全 ]
-  - name: simplification
-    states: [ 漢, 汉 ]
+  - name: zh_trad
+    reset: 0
+    states: [ 汉, 漢 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -63,6 +64,10 @@ translator:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+
+simplifier:
+  opencc_config: s2t.json
+  option_name: zh_trad
 
 custom_phrase:
   dictionary: ""
